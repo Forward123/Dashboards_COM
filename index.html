@@ -75,8 +75,8 @@
         
         .kpi-dark-blue { 
             background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%); 
-            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .dark .kpi-dark-blue { 
             background: linear-gradient(135deg, #1e40af 0%, #0f172a 100%); 
@@ -95,7 +95,6 @@
         .dark .era-btn { color: #94a3b8; }
         .era-btn:hover { transform: translateY(-2px); }
         
-        /* MATCHING COLORS: Timeline Era buttons aligned to chart zones */
         #btn-All { background-color: #e2e8f0; color: #334155; }
         #btn-Foundational { background-color: #f1f5f9; color: #475569; }
         #btn-Adaptive { background-color: #fce7f3; color: #be185d; }
@@ -122,20 +121,29 @@
         }
         .dark .modal-content { background: #1e293b; border-color: #334155; color: #f8fafc; }
 
-        .cqi-bg-curr { background-color: rgba(59, 130, 246, 0.1); }
-        .cqi-bg-asmt { background-color: rgba(217, 119, 6, 0.1); }
-        .cqi-bg-supp { background-color: rgba(16, 185, 129, 0.1); }
-        .cqi-bg-clin { background-color: rgba(236, 72, 153, 0.1); }
-        .cqi-bg-well { background-color: rgba(139, 92, 246, 0.1); }
+        /* BRIGHT/NEON NAIL BORDERS: Solid backgrounds with heavy, colorful left borders */
+        .cqi-bg-curr { background-color: #eff6ff; border-left: 6px solid #3b82f6; }
+        .cqi-bg-asmt { background-color: #fffbeb; border-left: 6px solid #f59e0b; }
+        .cqi-bg-supp { background-color: #ecfdf5; border-left: 6px solid #10b981; }
+        .cqi-bg-clin { background-color: #fdf2f8; border-left: 6px solid #ec4899; }
+        .cqi-bg-well { background-color: #faf5ff; border-left: 6px solid #8b5cf6; }
 
-        .footer-text-curr { color: #2563eb; }
-        .footer-text-asmt { color: #d97706; }
-        .footer-text-supp { color: #059669; }
-        .footer-text-clin { color: #db2777; }
-        .footer-text-well { color: #7c3aed; }
+        /* Dark Mode: Vibrant solid dark backgrounds with Luminous Neon left borders */
+        .dark .cqi-bg-curr { background-color: #1e3a8a; border-left: 6px solid #60a5fa; }
+        .dark .cqi-bg-asmt { background-color: #78350f; border-left: 6px solid #fbbf24; }
+        .dark .cqi-bg-supp { background-color: #064e3b; border-left: 6px solid #34d399; }
+        .dark .cqi-bg-clin { background-color: #831843; border-left: 6px solid #f472b6; }
+        .dark .cqi-bg-well { background-color: #581c87; border-left: 6px solid #c084fc; }
+
+        /* Text Colors */
+        .cqi-text-curr { color: #1d4ed8; } .dark .cqi-text-curr { color: #93c5fd; }
+        .cqi-text-asmt { color: #b45309; } .dark .cqi-text-asmt { color: #fde68a; }
+        .cqi-text-supp { color: #047857; } .dark .cqi-text-supp { color: #6ee7b7; }
+        .cqi-text-clin { color: #be185d; } .dark .cqi-text-clin { color: #f9a8d4; }
+        .cqi-text-well { color: #6d28d9; } .dark .cqi-text-well { color: #d8b4fe; }
         
-        .cqi-card-item:hover { transform: translateX(5px) scale(1.02); background-color: rgba(255,255,255,0.05); filter: brightness(1.05); }
-        .cqi-card-item { transition: all 0.2s ease; cursor: default; }
+        .cqi-card-item:hover { transform: translateX(5px) scale(1.02); filter: brightness(1.1); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        .cqi-card-item { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); cursor: default; }
 
         .pipeline-bar-bg { background-color: rgba(0,0,0,0.05); }
         .dark .pipeline-bar-bg { background-color: rgba(255,255,255,0.1); }
@@ -148,8 +156,8 @@
         <div class="modal-content shadow-2xl" onclick="event.stopPropagation()">
             <div class="flex justify-between items-start mb-8">
                 <div>
-                    <h3 class="text-2xl font-black text-slate-900 dark:text-slate-50">Strategic CQI Action Log (AY2025-26)</h3>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 font-bold mt-1 uppercase">Alignment: COCA 1.1, 1.2, 6.1, 6.2, 6.4, 7.1, 9.1, 11.2 | HLC Criterion 4.C</p>
+                    <h3 class="text-2xl font-black text-slate-900 dark:text-slate-50 tracking-tight">Strategic CQI Action Log (AY2025-26)</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 font-bold mt-1 uppercase tracking-wide">Alignment: COCA 1.1, 1.2, 6.1, 6.2, 6.4, 7.1, 9.1, 11.2 | HLC Criterion 4.C</p>
                 </div>
                 <button onclick="closeModal()" class="bg-slate-100 dark:bg-slate-800 p-2 rounded-full text-slate-500 hover:text-red-500 transition-all">&times;</button>
             </div>
@@ -160,11 +168,11 @@
             <div class="mt-10 p-6 bg-slate-50 dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-800">
                 <h4 class="text-[11px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-4 text-center lg:text-left">Accreditation Evidence Mapping</h4>
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-[10px] font-black uppercase">
-                    <div class="p-3 rounded-lg cqi-bg-curr text-center shadow-sm border border-black/5 dark:text-white">CURR: COCA 6.1 / 6.4</div>
-                    <div class="p-3 rounded-lg cqi-bg-asmt text-center shadow-sm border border-black/5 dark:text-white">ASMT: COCA 6.2</div>
-                    <div class="p-3 rounded-lg cqi-bg-supp text-center shadow-sm border border-black/5 dark:text-white">SUPP: COCA 7.1</div>
-                    <div class="p-3 rounded-lg cqi-bg-clin text-center shadow-sm border border-black/5 dark:text-white">CLIN: COCA 9.1</div>
-                    <div class="p-3 rounded-lg cqi-bg-well text-center shadow-sm border border-black/5 dark:text-white">WELL: COCA 11.2</div>
+                    <div class="p-3 rounded-lg cqi-bg-curr cqi-text-curr text-center shadow-sm">CURR: COCA 6.1 / 6.4</div>
+                    <div class="p-3 rounded-lg cqi-bg-asmt cqi-text-asmt text-center shadow-sm">ASMT: COCA 6.2</div>
+                    <div class="p-3 rounded-lg cqi-bg-supp cqi-text-supp text-center shadow-sm">SUPP: COCA 7.1</div>
+                    <div class="p-3 rounded-lg cqi-bg-clin cqi-text-clin text-center shadow-sm">CLIN: COCA 9.1</div>
+                    <div class="p-3 rounded-lg cqi-bg-well cqi-text-well text-center shadow-sm">WELL: COCA 11.2</div>
                 </div>
             </div>
         </div>
@@ -186,8 +194,8 @@
         <!-- Executive Summary -->
         <div class="summary-box shadow-sm">
             <div class="flex items-center gap-2 mb-3">
-                <span class="px-2 py-0.5 bg-blue-600 text-white text-[10px] font-black rounded uppercase">Institutional Effectiveness</span>
-                <h3 class="text-sm font-black uppercase tracking-widest text-blue-600">Executive CQI Summary</h3>
+                <span class="px-2 py-0.5 bg-blue-600 text-white text-[10px] font-black rounded uppercase shadow-sm">Institutional Effectiveness</span>
+                <h3 class="text-sm font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">Executive CQI Summary</h3>
             </div>
             
             <div class="flex flex-col lg:flex-row gap-8">
@@ -199,13 +207,13 @@
                     <div class="flex flex-col md:flex-row items-center gap-2 xl:gap-3 border-t pt-6 border-slate-200 dark:border-slate-800">
                         <div class="flex-1 kpi-dark-blue p-3.5 rounded-xl shadow-md w-full text-center md:text-left flex flex-col justify-center min-h-[75px]">
                             <p class="text-[10px] font-bold text-blue-100 dark:text-blue-300 uppercase tracking-widest mb-1 opacity-90 leading-tight">Strategic Target (OKR)</p>
-                            <p class="text-[12px] font-extrabold text-white leading-tight">98% First-Time Pass Rate</p>
+                            <p class="text-[12px] xl:text-[13px] font-black text-white leading-tight">98% First-Time Pass Rate</p>
                         </div>
                         <div class="text-slate-300 dark:text-slate-600 hidden md:block font-black text-lg shrink-0">➔</div>
                         <div class="text-slate-300 dark:text-slate-600 block md:hidden font-black text-lg rotate-90 my-1">➔</div>
                         <div class="flex-1 kpi-mixed p-3.5 rounded-xl shadow-md w-full text-center md:text-left border border-white/20 flex flex-col justify-center min-h-[75px]">
                             <p class="text-[10px] font-bold text-white uppercase tracking-widest mb-1 opacity-80 leading-tight">Monitored Metric (KPI)</p>
-                            <p class="text-[12px] font-extrabold text-white leading-tight">M2 Readiness & M4 Core EPAs</p>
+                            <p class="text-[12px] xl:text-[13px] font-black text-white leading-tight">M2 Readiness & M4 Core EPAs</p>
                         </div>
                         <div class="text-slate-300 dark:text-slate-600 hidden md:block font-black text-lg shrink-0">➔</div>
                         <div class="text-slate-300 dark:text-slate-600 block md:hidden font-black text-lg rotate-90 my-1">➔</div>
@@ -214,7 +222,7 @@
                                 <p class="text-[10px] font-bold text-purple-100 uppercase tracking-widest opacity-90 leading-tight">Executed CQI Action</p>
                             </div>
                             <div class="flex items-center justify-center md:justify-start gap-1">
-                                <p class="text-[12px] font-extrabold text-white leading-tight whitespace-nowrap">View the Strategic Action Log</p>
+                                <p class="text-[12px] xl:text-[13px] font-black text-white leading-tight whitespace-nowrap">View the Strategic Action Log</p>
                                 <span class="text-[14px] group-hover:translate-x-1 transition-transform">👆</span>
                             </div>
                         </div>
@@ -271,7 +279,6 @@
                         <p class="text-purple-200 text-[10px] xl:text-[11px] font-bold mt-1 uppercase tracking-wide whitespace-nowrap">Executed AY25-26</p>
                     </div>
                     <div>
-                        <!-- Clean emoji matched to the rest of the UI -->
                         <p class="kpi-value flex items-center gap-3">14 <span class="text-[20px] group-hover:translate-x-1 transition-transform">👆</span></p>
                         <p class="kpi-footer underline decoration-dotted tracking-tight">Click to View the Log</p>
                     </div>
@@ -408,9 +415,9 @@
             const themeMap = { 'CURRICULUM': { css: 'curr', std: 'COCA 6.1/6.4' }, 'ASSESSMENT': { css: 'asmt', std: 'COCA 6.2' }, 'SUPPORT': { css: 'supp', std: 'COCA 7.1' }, 'CLINICAL': { css: 'clin', std: 'COCA 9.1' }, 'WELLNESS': { css: 'well', std: 'COCA 11.2' } };
             const createItemHtml = (item, idx) => {
                 const theme = themeMap[item.category];
-                return `<div class="flex gap-4 p-5 rounded-2xl cqi-bg-${theme.css} cqi-card-item border border-black/5 dark:border-white/5 shadow-md">
-                    <span class="text-xs font-black ${isDarkMode?'text-white':'footer-text-'+theme.css} opacity-60">${idx+1}</span>
-                    <div><span class="text-[9px] font-black uppercase tracking-[0.15em] ${isDarkMode?'text-white':'footer-text-'+theme.css} mb-1 block">${item.category} | ${theme.std}</span><p class="text-[13px] font-bold leading-tight ${isDarkMode?'text-white':'text-slate-900'}">${item.action}</p></div>
+                return `<div class="flex gap-4 p-4 rounded-xl cqi-bg-${theme.css} cqi-card-item shadow-sm">
+                    <span class="text-[14px] font-black cqi-text-${theme.css} mt-0.5">${idx+1}</span>
+                    <div><span class="text-[10px] font-black uppercase tracking-[0.15em] cqi-text-${theme.css} mb-1 block">${item.category} | ${theme.std}</span><p class="text-[14px] font-bold leading-tight ${isDarkMode?'text-slate-50':'text-slate-900'}">${item.action}</p></div>
                 </div>`;
             };
             col1.innerHTML = cqiActions.slice(0, 7).map((item, i) => createItemHtml(item, i)).join('');
@@ -431,7 +438,6 @@
                 annotations.covidLine = { type: 'line', scaleID: 'x', value: 3.5, borderColor: '#f43f5e', borderWidth: 1, borderDash: [3,3], z: 40 };
                 annotations.recoveryLine = { type: 'line', scaleID: 'x', value: 6.5, borderColor: '#06b6d4', borderWidth: 1, borderDash: [3,3], z: 40 };
 
-                // Labels manually anchored to the exact Y value ceilings (99% and 9.2%)
                 annotations.covidLabel = {
                     type: 'label', xScaleID: 'x', xValue: 3.5, yScaleID: 'y', yValue: labelYValue,
                     content: 'COVID Transition', backgroundColor: '#f43f5e', z: 50, ...labelBase
@@ -457,6 +463,8 @@
 
             const textColor = isDarkMode ? '#f8fafc' : '#1e293b', gridColor = isDarkMode ? '#1e293b' : '#e2e8f0';
             const muLineColor = isDarkMode ? '#60a5fa' : '#1e40af';
+            const muFillColor = isDarkMode ? 'rgba(96, 165, 250, 0.1)' : 'rgba(30, 64, 175, 0.1)';
+
             let filteredData = [...anchorData];
             if (filter === 'Foundational') filteredData = anchorData.filter(d => parseInt(d.year) <= 2019);
             else if (filter === 'Adaptive') filteredData = anchorData.filter(d => parseInt(d.year) >= 2020 && parseInt(d.year) <= 2022);
@@ -472,7 +480,10 @@
 
             anchorChart = new Chart(ctx1, { 
                 type: 'line', 
-                data: { labels: filteredData.map(d => d.year), datasets: [{ label: 'MU', data: filteredData.map(d => d.mocupass), borderColor: muLineColor, backgroundColor: muLineColor, tension: 0.3, pointRadius: 4, z: 20 }, { label: 'National', data: filteredData.map(d => d.natl), borderColor: '#f43f5e', backgroundColor: '#f43f5e', tension: 0.3, pointRadius: 4, z: 20 }] }, 
+                data: { labels: filteredData.map(d => d.year), datasets: [
+                    { label: 'MU', data: filteredData.map(d => d.mocupass), borderColor: muLineColor, backgroundColor: muFillColor, fill: true, tension: 0.3, pointRadius: 4, z: 20 }, 
+                    { label: 'National', data: filteredData.map(d => d.natl), borderColor: '#f43f5e', backgroundColor: '#f43f5e', tension: 0.3, pointRadius: 4, z: 20 }
+                ] }, 
                 options: { ...baseOptions, plugins: { ...baseOptions.plugins, annotation: { annotations: getSharedAnnotations(filter, 99) } }, scales: { ...baseOptions.scales, y: { min: 88, max: 100, ticks: { callback: v => v + '%' } } } } 
             });
 
